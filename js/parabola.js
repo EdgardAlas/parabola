@@ -56,7 +56,7 @@
         if (dibujoInicio) {
 
             //Figura inicial
-            formulaGeneral(10, 10, -10, 30, 1, 2, 1)
+            formulaGeneral(1, 1, -1, 1, 1, 2, 1)
 
 
             // document.querySelector("#maxX").textContent = Math.trunc((ancho / 2) / 10)
@@ -74,8 +74,8 @@
     const iniciarRadios = () => {
         radioX.max = Math.trunc((ancho / escala))
         radioX.min = -Math.trunc((ancho / escala))
-        radioX.value = -10
-        radioX.previousElementSibling.firstElementChild.textContent = -10
+        radioX.value = -1
+        radioX.previousElementSibling.firstElementChild.textContent = -1
 
         // radioR.max = Math.trunc((ancho / escala) / 2 / 2)
         // radioR.min = -Math.trunc((ancho / escala) / 2 / 2)
@@ -85,16 +85,16 @@
 
         x.min = Math.trunc(- (ancho / 2) / escala)
         x.max = Math.trunc((ancho / 2) / escala)
-        x.value = 10
+        x.value = 1
 
         radioY.max = Math.trunc((ancho / escala))
         radioY.min = -Math.trunc((ancho / escala))
-        radioY.value = 30
-        radioY.previousElementSibling.firstElementChild.textContent = 30
+        radioY.value = 1
+        radioY.previousElementSibling.firstElementChild.textContent = 1
 
         y.min = Math.trunc(- (alto / 2) / escala)
         y.max = Math.trunc((alto / 2) / escala)
-        y.value = 10
+        y.value = 1
     }
 
     const raiz = (base, raiz) => {
