@@ -2,7 +2,7 @@ Para ejecturar:
 - abrir el archivo index en el navegador
 
 como alternativa esta la version enlinea
-https://hiperbole.vercel.app/
+https://parabola.vercel.app/
 
 
 

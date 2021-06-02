@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom.css">
-    <title>Hiperbole / Circulo - RA17046</title>
+    <title>Parabola / Circulo - RA17046</title>
 </head>
 
 <body>
@@ -27,24 +27,25 @@
             <form class="centro" id="centro">
                 <div class="col mb-2">
                     <label for="">Centro X (h)</label>
-                    <input type="number" class="form-control" name="x" id="x" step="1" autofocus autocomplete="off">
+                    <input type="number" class="form-control" value="10" name="x" id="x" step="1" autofocus
+                        autocomplete="off">
                 </div>
                 <div class="col mb-2">
                     <label for="">Centro Y (K)</label>
-                    <input type="number" class="form-control" name="y" id="y" step="1" autocomplete="off">
+                    <input type="number" class="form-control" value="10" name="y" id="y" step="1" autocomplete="off">
                 </div>
                 <div class="col mb-2">
                     <label for="angulo">Angulo</label>
                     <input type="number" class="form-control" name="angulo" id="angulo" step="1" min="-360" max="360"
-                        value="0" autocomplete="off">
+                        value="45" autocomplete="off">
                 </div>
                 <div class="col mb-2">
-                    <label for="customRange1" class="form-label">Radio X = <span class="fw-bold"></span></label>
-                    <input type="range" class="form-range" id="radio_x" name="radio_x" min="1" step="1">
+                    <label for="customRange1" class="form-label">a = <span class="fw-bold"></span></label>
+                    <input type="range" class="form-range" id="radio_x" name="radio_x" value="-10" min="1" step="1">
                 </div>
                 <div class="col mb-2">
-                    <label for="customRange1" class="form-label">Radio Y = <span class="fw-bold"></span></label>
-                    <input type="range" class="form-range" id="radio_y" name="radio_y" min="1" step="1">
+                    <label for="customRange1" class="form-label">b = <span class="fw-bold"></span></label>
+                    <input type="range" value="30" class="form-range" id="radio_y" name="radio_y" min="1" step="1">
                 </div>
                 <!-- <div class="col mb-2">
                     <label for="customRange1" class="form-label">Radio R = <span class="fw-bold"></span></label>

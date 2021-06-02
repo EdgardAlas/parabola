@@ -56,7 +56,7 @@
         if (dibujoInicio) {
 
             //Figura inicial
-            formulaGeneral(0, 0, 1, 1, 1, 2, 1)
+            formulaGeneral(10, 10, -10, 30, 1, 2, 1)
 
 
             // document.querySelector("#maxX").textContent = Math.trunc((ancho / 2) / 10)
@@ -74,8 +74,8 @@
     const iniciarRadios = () => {
         radioX.max = Math.trunc((ancho / escala))
         radioX.min = -Math.trunc((ancho / escala))
-        radioX.value = 1
-        radioX.previousElementSibling.firstElementChild.textContent = 1
+        radioX.value = -10
+        radioX.previousElementSibling.firstElementChild.textContent = -10
 
         // radioR.max = Math.trunc((ancho / escala) / 2 / 2)
         // radioR.min = -Math.trunc((ancho / escala) / 2 / 2)
@@ -85,16 +85,16 @@
 
         x.min = Math.trunc(- (ancho / 2) / escala)
         x.max = Math.trunc((ancho / 2) / escala)
-        x.value = 0
+        x.value = 10
 
         radioY.max = Math.trunc((ancho / escala))
         radioY.min = -Math.trunc((ancho / escala))
-        radioY.value = 1
-        radioY.previousElementSibling.firstElementChild.textContent = 1
+        radioY.value = 30
+        radioY.previousElementSibling.firstElementChild.textContent = 30
 
         y.min = Math.trunc(- (alto / 2) / escala)
         y.max = Math.trunc((alto / 2) / escala)
-        y.value = 0
+        y.value = 10
     }
 
     const raiz = (base, raiz) => {
@@ -120,26 +120,31 @@
         let coseno = Math.cos(radianes),
             seno = Math.sin(radianes)
 
-        let inicio = Math.abs(a)
+        let inicio = Math.abs(canvas.clientWidth)
         // Cordenadas Y
         for (let x = -inicio; x <= inicio; x++) {
             const y = raiz((raiz(r, 2) - raiz(x, n) / a) * b, 1 / m)
-            // console.log(y)
+            console.log(y)
 
-            console.log(radianes)
+            // console.log(radianes)
             let nX, nY
 
             nX = x * coseno - y * seno
             nY = x * seno + y * coseno
 
             pintarPunto(nX + h, nY + k)
+            // pintarPunto(nX + h, -nY + k)
             if (angl == 0 && m > n) {
                 pintarPunto(nX + h, -nY + k)
+            } else if (m > n) {
+                nY = x * seno - y * coseno
+                nX = x * coseno + y * seno
+                pintarPunto(nX + h, nY + k)
             }
 
         }
 
-        inicio = Math.abs(b)
+        inicio = Math.abs(canvas.clientHeight)
         // Coordenadas X
         for (let y = -inicio; y <= inicio; y++) {
 
@@ -154,6 +159,10 @@
             pintarPunto(nX + h, nY + k)
             if (angl == 0 && n > m) {
                 pintarPunto(-nX + h, nY + k)
+            } else if (n > m) {
+                nY = x * seno - y * coseno
+                nX = x * coseno + y * seno
+                pintarPunto(-nX + h, -nY + k)
             }
 
 
