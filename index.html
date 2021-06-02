@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Hiperbole / Circulo - RA17046</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark ps-3">
+        <h1 class="h4"><a class="navbar-brand" href="#">Parabola - Edgard Eduardo Rodriguz Alas /
+                RA17046</a>
+        </h1>
+        <div class="d-flex bg-secondary me-3 p-1 rounded">
+            <span class="m-0 text-light">Color de trazo: &nbsp;</span>
+            <input type="color" id="color">
+        </div>
+    </nav>
+
+
+    <main class="row">
+        <div class="col-2">
+            <form class="centro" id="centro">
+                <div class="col mb-2">
+                    <label for="">Centro X (h)</label>
+                    <input type="number" class="form-control" name="x" id="x" step="1" autofocus autocomplete="off">
+                </div>
+                <div class="col mb-2">
+                    <label for="">Centro Y (K)</label>
+                    <input type="number" class="form-control" name="y" id="y" step="1" autocomplete="off">
+                </div>
+                <div class="col mb-2">
+                    <label for="angulo">Angulo</label>
+                    <input type="number" class="form-control" name="angulo" id="angulo" step="1" min="-360" max="360"
+                        value="0" autocomplete="off">
+                </div>
+                <div class="col mb-2">
+                    <label for="customRange1" class="form-label">Radio X = <span class="fw-bold"></span></label>
+                    <input type="range" class="form-range" id="radio_x" name="radio_x" min="1" step="1">
+                </div>
+                <div class="col mb-2">
+                    <label for="customRange1" class="form-label">Radio Y = <span class="fw-bold"></span></label>
+                    <input type="range" class="form-range" id="radio_y" name="radio_y" min="1" step="1">
+                </div>
+                <!-- <div class="col mb-2">
+                    <label for="customRange1" class="form-label">Radio R = <span class="fw-bold"></span></label>
+                    <input type="range" class="form-range" id="radio_r" name="radio_r" min="1" step="1">
+                </div> -->
+                <div class="col mb-2">
+                    <button class="btn btn-secondary w-100" id="btn-abrir-en">Abrir en vertical</button>
+                </div>
+                <div class="col d-none">
+                    <button class="btn btn-secondary w-100" id="btn-dibujar">Dibujar</button>
+                </div>
+            </form>
+            <hr>
+            <!-- <div class="col centro">
+                <h2 class="h6">Información de plano.</h2>
+                <ul>
+                    <li>
+                        <p class="m-0">
+                            Puntos en X por cuadrante: <span class="fw-bold" id="maxX">20</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="m-0">
+                            Puntos en Y por cuadrante: <span class="fw-bold" id="maxY">20</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="m-0">
+                            Radio Maximo en X: <span class="fw-bold" id="maxRX">20</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="m-0">
+                            Radio maximo en Y: <span class="fw-bold" id="maxRY">20</span>
+                        </p>
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+        <div class="col-10">
+            <div class="container-fluid" id="canvas-container">
+                <canvas class="canvas-container__canvas bg-light"></canvas>
+            </div>
+        </div>
+    </main>
+    <script src="js/hiperbole.js""></script>
+</body>
+
+</html>

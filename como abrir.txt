@@ -1,0 +1,9 @@
+Para ejecturar:
+- abrir el archivo index en el navegador
+
+como alternativa esta la version enlinea
+https://hiperbole.vercel.app/
+
+
+
+el codigo fuente de la logica del programa esta en el archivo hiperbole de la carpeta js
