@@ -6,4 +6,4 @@ https://parabola.vercel.app/
 
 
 
-el codigo fuente de la logica del programa esta en el archivo hiperbole de la carpeta js
+el codigo fuente de la logica del programa esta en el archivo parabola de la carpeta js
